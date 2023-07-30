@@ -1,0 +1,12 @@
+.base-grid{
+    display: grid;
+    grid-template-rows: 90% 10%;
+}
+.sidebar{
+    display: grid;
+    grid-template-rows: 20% 80%;
+}
+.content-grid{
+    display: grid;
+    grid-template-columns: 25% 75%;
+}

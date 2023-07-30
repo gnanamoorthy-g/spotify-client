@@ -1,10 +1,12 @@
 import React from "react";
 
+import Layout from "./layout";
+
 const App = () =>{
     return (
-        <h1>
-            Hello world! I am using React
-        </h1>
+        <div className="dark root-node">
+            <div className="full-ht"><Layout/></div>
+        </div>
     )
 }
 

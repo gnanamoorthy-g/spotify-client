@@ -11,8 +11,15 @@
 
 /*----- Layout ------*/
 @import './layout/grid.scss';
+@import './layout/viewport.scss';
+@import './layout/spaces.scss';
+@import './layout/flex.scss';
 /*----- Layout ------*/
 
 /*----- Pages ------*/
 @import './pages/home.scss';
 /*----- Pages ------*/
+
+/*----- Themes ------*/
+@import './themes/themes.scss';
+/*----- Themes ------*/
