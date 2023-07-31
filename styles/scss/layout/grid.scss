@@ -1,12 +1,15 @@
 .base-grid{
     display: grid;
-    grid-template-rows: 90% 10%;
+    grid-template-rows: calc(90% - 5px) calc(10% - 5px);
+    gap: 10px;
 }
 .sidebar{
     display: grid;
-    grid-template-rows: 20% 80%;
+    grid-template-rows: calc(20% - 5px) calc(80% - 5px);
+    gap: 10px;
 }
 .content-grid{
     display: grid;
-    grid-template-columns: 25% 75%;
+    grid-template-columns: calc(25% - 5px) calc(75% - 5px);
+    gap: 10px;
 }
