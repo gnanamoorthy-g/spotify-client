@@ -1,22 +1,27 @@
 import axios from "axios";
-//require('dotenv').config();
-
+import { CLIENT_ID,CLIENT_SECRET,FETCH_TOKEN_URI,GRANT_TYPE } from "../constants/environment";
 
 export const fetchAccessToken = async () => {
     const postData = new URLSearchParams({
-        grant_type: "client_credentials",
-        // client_id: client_id,
-        // client_secret: client_secret
+        grant_type: GRANT_TYPE,
+        client_id: CLIENT_ID,
+        client_secret: CLIENT_SECRET
     });
-    const TOKEN_RESPONSE = await axios.post('https://accounts.spotify.com/api/token',
-        postData,
-        {
-            headers: {
-                "Content-Type": "application/x-www-form-urlencoded"
+    try {
+        const TOKEN_RESPONSE = await axios.post(
+            FETCH_TOKEN_URI,
+            postData,
+            {
+                headers: {
+                    "Content-Type": "application/x-www-form-urlencoded"
+                }
             }
-        }
-    );
-    document.cookie=`token=${TOKEN_RESPONSE.data.access_token};expires=${TOKEN_RESPONSE.data.expires_in};token_type=${TOKEN_RESPONSE.data.token_type}`;
+        );
+        document.cookie = `token=${TOKEN_RESPONSE.data.access_token};expires=${TOKEN_RESPONSE.data.expires_in};token_type=${TOKEN_RESPONSE.data.token_type}`;
+    }
+    catch (error) {
+        console.log(error)
+    }
 }
 
 export function getCookie(name) {
@@ -27,8 +32,4 @@ export function getCookie(name) {
 
 export const getAccessToken = () =>{
     return getCookie('token') || null
-}
-
-export const fetchSong = () =>{
-
 }

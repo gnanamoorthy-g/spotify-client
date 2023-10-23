@@ -1,0 +1,15 @@
+.player{
+    .controls{
+        width: 40%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .play{
+            cursor: pointer;
+        }
+    }
+    .accessories,.stub{
+        width: 30%;
+        display: flex;
+    }
+}
