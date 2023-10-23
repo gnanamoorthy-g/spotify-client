@@ -13,12 +13,12 @@ const Menu = () =>{
         )
     }
 
-    const listMenus = () =>{
+    const listMenu = () =>{
         return(
             <div>{MENU.map(item => getMenuItem(item))}</div>
         )
     }
-    return(listMenus())
+    return listMenu()
 }
 
 export default Menu;
