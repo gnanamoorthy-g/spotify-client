@@ -5,8 +5,9 @@ const DotEnv = require('dotenv-webpack')
 module.exports = {
     entry: './index.js',
     mode: 'development',
-    //mode: 'production',
     devtool : 'inline-source-map',
+    // mode: 'production',
+    // devtool : 'source-map',
     output: {
         path: path.resolve(__dirname, './dist'),
         filename: 'bundle.js',
