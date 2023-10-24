@@ -4,18 +4,18 @@ import { MENU } from "../utils/menuUtils";
 const Menu = () =>{
 
     const getMenuItem = (item = null) =>{
-        if(!item) return
+        if(!item) return;
         return (
-            <div key={item?.page} className="flex">
-                <div></div>
-                <div>{item?.label}</div>
+            <div key={item?.page} className="flex px-2 cursor-pointer">
+                <div className="flex justify-center items-center mx-2">{item?.icon}</div>
+                <div className="flex justify-center items-center mx-2">{item?.label}</div>
             </div>
         )
     }
 
     const listMenu = () =>{
         return(
-            <div>{MENU.map(item => getMenuItem(item))}</div>
+            <div className="flex flex-column full-ht justify-evenly">{MENU.map(item => getMenuItem(item))}</div>
         )
     }
     return listMenu()
