@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import Controls from "./controls";
-import Progress from "./playProgress";
 import { sendRequest } from "../../apiController";
-import './player.scss'
+import './player.scss';
+
+const Controls =  React.lazy(()=> import('./controls'));
+const Progress =  React.lazy(()=> import('./playProgress'));
 
 const Player = () => {
     const [nowPlaying, setNowPlaying] = useState(null);
