@@ -1,11 +1,11 @@
 import React from "react";
 
-const SearchScreen = () =>{
+const Library = () =>{
     return (
         <div className="full-ht">
-            SearchScreen
+            Library
         </div>
     )
 }
 
-export default SearchScreen;
+export default Library;

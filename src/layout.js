@@ -1,5 +1,7 @@
 import React from "react";
 import Menu from "./components/menu";
+import MainContent from "./pages/mainContent";
+import Library from "./components/library";
 import Player from "./components/player";
 
 const Layout =() =>{
@@ -11,9 +13,13 @@ const Layout =() =>{
                         <div className="bg-base card-bordered">
                             <Menu/>
                         </div>
-                        <div className="bg-base card-bordered">Library</div>
+                        <div className="bg-base card-bordered">
+                            <Library/>
+                        </div>
                     </div>
-                    <div className="bg-base card-bordered">Content</div>
+                    <div className="bg-base card-bordered">
+                        <MainContent/>
+                    </div>
                 </div>
                 <div className="">
                     <Player/>
