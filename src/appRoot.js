@@ -4,7 +4,7 @@ import MainContent from "./pages/mainContent";
 import Library from "./components/library";
 import Player from "./components/player";
 
-const Layout =() =>{
+const AppRoot =() =>{
     return (
         <div className="full-ht full-wid p-lr-10 p-t-10">
             <div className="full-ht base-grid">
@@ -29,4 +29,4 @@ const Layout =() =>{
     )
 }
 
-export default Layout
+export default AppRoot

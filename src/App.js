@@ -1,5 +1,5 @@
 import React, { useEffect,createContext, useState } from "react";
-import Layout from "./layout";
+import AppRoot from "./appRoot";
 import { fetchAccessToken } from "./utils/utilFunctions";
 
 export const AppStateContext = createContext(null);
@@ -22,7 +22,7 @@ const App = () =>{
         <>
             <AppStateContext.Provider value={getContext()}>
                 <div className="dark root-node">
-                    <Layout />
+                    <AppRoot />
                 </div>
             </AppStateContext.Provider>
         </>
