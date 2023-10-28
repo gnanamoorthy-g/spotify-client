@@ -45,6 +45,7 @@ export const fetchUserAccessToken = async () => {
             }
         );
         document.cookie = `auth_token=${TOKEN_RESPONSE.data.access_token};expires=${TOKEN_RESPONSE.data.expires_in};token_type=${TOKEN_RESPONSE.data.token_type};`;
+        return TOKEN_RESPONSE.data.access_token;
     }
     catch (error) {
         console.log(error)

@@ -7,7 +7,6 @@ const Menu = () =>{
     const [currentPage,setCurrentPage] = useState(null);
 
     const onClick = (item) => (event) =>{
-        console.log(item,event);
         setCurrentPage(item);
         if(setAppState && (setAppState instanceof Function)){
             setAppState({...appState,currentPage : item})

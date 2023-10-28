@@ -10,13 +10,13 @@ const MainContent = () =>{
 
     if(currentPage?.page === 'search'){
         return (
-            <Suspense fallback={<div>Loading...</div>}>
+            <Suspense fallback={null}>
                 <SearchScreen />
             </Suspense>
         );
     };
     return (
-        <Suspense fallback={<div>Loading...</div>}>
+        <Suspense fallback={null}>
             <HomeScreen/>
         </Suspense>
     )
