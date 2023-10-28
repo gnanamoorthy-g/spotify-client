@@ -17,7 +17,7 @@ export const fetchAccessToken = async () => {
                 }
             }
         );
-        document.cookie = `token=${TOKEN_RESPONSE.data.access_token};expires=${TOKEN_RESPONSE.data.expires_in};token_type=${TOKEN_RESPONSE.data.token_type}`;
+        document.cookie = `token=${TOKEN_RESPONSE.data.access_token};expires=${TOKEN_RESPONSE.data.expires_in};token_type=${TOKEN_RESPONSE.data.token_type};`;
     }
     catch (error) {
         console.log(error)
