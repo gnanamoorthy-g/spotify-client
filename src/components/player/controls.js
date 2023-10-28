@@ -26,7 +26,7 @@ const Controls = (props) => {
             <div></div>
             <div></div>
             <div className="play" onClick={onClickPlay}>
-                <span class="material-symbols-outlined">play_arrow</span>
+                <span className="material-symbols-outlined">play_arrow</span>
             </div>
             <div></div>
             <div></div>
