@@ -1,6 +1,6 @@
 import axios from "axios";
 import { BASE_URL } from "./constants/environment";
-import { getAccessToken } from "./utils/utilFunctions";
+import { getAccessToken,getCookie,getAuthToken } from "./utils/utilFunctions";
 import { AUTHORIZATION_URI,SCOPE,CLIENT_ID,REDIRECT_URI } from "./constants/environment";
 import { TRACK,ALBUM,ARTIST,PLAYLIST,SEARCH } from "./constants/apiRoutes";
 
@@ -13,28 +13,28 @@ const constructRequestConfig = (url,method,token) =>{
     }
 }
 
-export const sendRequest = (method = "get",type = TRACK, id = null,searchParams=null,searchType = null) =>{
-    if(!type) return;
-    if(type === SEARCH && !searchParams) return;
-    if(type !== SEARCH && !id) return;
-
+export const sendRequest = (resourceUrl,isSearch = false,searchParams=null) =>{
     let requestUrl;
-    if(type !== SEARCH){
-        requestUrl = `${type}/${id}`
-    }
-    else{
+    if(isSearch){
         //Search to be implemented;
     }
-    const token = getAccessToken();
+    else{
+        requestUrl = resourceUrl;
+    }
+    let token;
+    token = getAuthToken();
+    if(!token) token = getAccessToken();
     if(!token){
         console.log("Token unavailable");
         return;
     }
-    let requestConfig = constructRequestConfig(requestUrl,method,token);
+    let requestConfig = constructRequestConfig(requestUrl,'get',token);
     return axios(requestConfig);
 }
 
 export const authorizeApp = () =>{
+    const authorization_key = getCookie('authorization_key');
+    if(authorization_key) return;
     const width = 900;
     const height = 600;
     const left = (screen.width - width) / 2;

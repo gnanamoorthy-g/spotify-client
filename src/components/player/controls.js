@@ -10,7 +10,8 @@ const Controls = (props) => {
     const TRACK_ID = '11dFghVXANMlKmJXsNCbNl'
 
     const onClickPlay = () =>{
-        const trackResponse = sendRequest('get',TRACK,TRACK_ID);
+        let resourceUrl = `${TRACK}/${TRACK_ID}`
+        const trackResponse = sendRequest(resourceUrl);
         trackResponse
         .then(response =>{
             setNowPlaying(response.data);
