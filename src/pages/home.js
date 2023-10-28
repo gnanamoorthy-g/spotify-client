@@ -1,9 +1,11 @@
 import React from "react";
+const NavigationBar =  React.lazy(() => import('./../components/navigationBar/index'));
 
 const HomeScreen = () =>{
     return (
         <div className="full-ht">
-            HomeScreen
+            <NavigationBar/>
+            <div></div>
         </div>
     )
 }

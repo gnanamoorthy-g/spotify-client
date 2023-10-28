@@ -1,0 +1,27 @@
+@import '../../../styles/scss/helpers/variables';
+.search-bar{
+    padding: 0px 5px;
+    background-color: #242424;
+    border-radius: 999px;
+    .search-icon-container{
+        height: 32px;
+        width: 32px;
+    }
+    input{
+        font-size: 14px;
+        background-color: inherit;
+        border : none;
+        outline: none;
+    }
+    input:focus {
+        border : none;
+        outline: none;
+    }
+    input::placeholder {
+        font-size: 13px;
+        font-weight: 200;
+    }
+}
+.highlight-border{
+    border: 2px solid $background-highlight;
+}

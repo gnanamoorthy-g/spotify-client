@@ -1,0 +1,14 @@
+.navigation-bar{
+    max-height: 64px;
+    background: rgba(0,0,0,.5);
+    .nav-prev-btn, .nav-prev-next{
+        background: rgba(0,0,0,.7);
+        border: none;
+        border-radius: 50%;
+        height: 32px;
+        width: 32px;
+        img{
+            transform: scale(1.5);
+        }
+    }
+}

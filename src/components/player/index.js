@@ -9,7 +9,7 @@ const Player = () => {
     const [nowPlaying, setNowPlaying] = useState(null);
 
     return (
-        <div className="flex full-ht player">
+        <div className="flex full-ht player not-logged-in">
             <div className="stub"></div>
             <div className="controls">
                 <div>

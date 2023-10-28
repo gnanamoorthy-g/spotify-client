@@ -31,7 +31,7 @@ const Menu = () =>{
 
     const listMenu = () =>{
         return(
-            <div className="flex flex-column full-ht justify-evenly">{MENU.map(item => getMenuItem(item))}</div>
+            <div className="flex flex-col full-ht justify-evenly">{MENU.map(item => getMenuItem(item))}</div>
         )
     }
     return listMenu();
