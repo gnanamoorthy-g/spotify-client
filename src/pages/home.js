@@ -13,7 +13,7 @@ const HomeScreen = () =>{
         let user_id = user_details.id;
         const resource_url = `/users/${user_id}/playlists`;
         const response = await sendRequest(resource_url);
-        console.log(response,"response")
+        setPlayLists(response);
     };
 
     useEffect(()=>{

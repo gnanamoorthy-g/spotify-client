@@ -20,7 +20,7 @@ const UserProfile = () =>{
     },[]);
 
     return (
-        <div className="user-profile cursor-pointer" title={userProfile.display_name}>
+        <div className="user-profile cursor-pointer" title={userProfile?.display_name}>
             <div className="flex items-center justify-center">
                 <img src={Profile}/>
             </div>
